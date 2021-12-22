@@ -123,7 +123,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addContainerGap(317, Short.MAX_VALUE))
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(98, 98, 98)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                         .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(BackgroundLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
