@@ -60,7 +60,7 @@ public class Registration extends javax.swing.JFrame {
             .addGroup(HeadLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addContainerGap(835, Short.MAX_VALUE))
+                .addContainerGap(840, Short.MAX_VALUE))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         HeadLayout.setVerticalGroup(
