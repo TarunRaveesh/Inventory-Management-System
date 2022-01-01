@@ -62,7 +62,7 @@ public class Registration extends javax.swing.JFrame {
             .addGroup(HeadLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addContainerGap(951, Short.MAX_VALUE))
+                .addContainerGap(1005, Short.MAX_VALUE))
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         HeadLayout.setVerticalGroup(
@@ -169,7 +169,7 @@ public class Registration extends javax.swing.JFrame {
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(ContainerLayout.createSequentialGroup()
-                        .addContainerGap(259, Short.MAX_VALUE)
+                        .addContainerGap(286, Short.MAX_VALUE)
                         .addGroup(ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(ContainerLayout.createSequentialGroup()
                                 .addGroup(ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -199,7 +199,7 @@ public class Registration extends javax.swing.JFrame {
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(customer_email1)))))
-                .addContainerGap(260, Short.MAX_VALUE))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
         ContainerLayout.setVerticalGroup(
             ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
