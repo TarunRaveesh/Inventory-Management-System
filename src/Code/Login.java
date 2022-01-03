@@ -79,7 +79,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Login");
 
         jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jButton2.setText("SignUp");
+        jButton2.setText("Sign Up");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -128,7 +128,7 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setText("Usertype");
 
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
-        jButton1.setText("Log in");
+        jButton1.setText("Log In");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,9 +190,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(Sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 255, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 248, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(256, Short.MAX_VALUE))
+                        .addContainerGap(249, Short.MAX_VALUE))
                     .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(450, 450, 450)
                         .addComponent(jLabel1)
