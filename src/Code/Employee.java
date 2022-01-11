@@ -21,7 +21,7 @@ public class Employee extends javax.swing.JFrame {
      */
     public Employee() {
         initComponents();
-        JButton [] btns = {jButton1, jButton2, jButton3, jButton5, jButton4, jButton6};
+        JButton [] btns = {Home_Btn, Employee_Btn, Payment_Btn, About_Btn, Sales_Btn, Menu_Btn};
         for (JButton btn : btns) {
             btn.setBackground(new Color(0, 0, 0));
             btn.setUI(new BasicButtonUI());
@@ -84,12 +84,12 @@ public class Employee extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        Menu_Btn = new javax.swing.JButton();
+        Home_Btn = new javax.swing.JButton();
+        Employee_Btn = new javax.swing.JButton();
+        Sales_Btn = new javax.swing.JButton();
+        Payment_Btn = new javax.swing.JButton();
+        About_Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -292,69 +292,69 @@ public class Employee extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(50, 150));
         jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 5, 0));
 
-        jButton6.setBackground(new java.awt.Color(38, 38, 38));
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_menu_28px_2.png"))); // NOI18N
-        jButton6.setPreferredSize(new java.awt.Dimension(40, 40));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Menu_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Menu_Btn.setForeground(new java.awt.Color(255, 255, 255));
+        Menu_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_menu_28px_2.png"))); // NOI18N
+        Menu_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Menu_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                Menu_BtnActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton6);
+        jPanel4.add(Menu_Btn);
 
         jPanel2.add(jPanel4);
 
-        jButton1.setBackground(new java.awt.Color(38, 38, 38));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_home_28px.png"))); // NOI18N
-        jButton1.setPreferredSize(new java.awt.Dimension(40, 40));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Home_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Home_Btn.setForeground(new java.awt.Color(255, 255, 255));
+        Home_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_home_28px.png"))); // NOI18N
+        Home_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Home_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Home_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
+        jPanel2.add(Home_Btn);
 
-        jButton2.setBackground(new java.awt.Color(38, 38, 38));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_profile_28px.png"))); // NOI18N
-        jButton2.setPreferredSize(new java.awt.Dimension(40, 40));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Employee_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Employee_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_profile_28px.png"))); // NOI18N
+        Employee_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Employee_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Employee_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2);
+        jPanel2.add(Employee_Btn);
 
-        jButton3.setBackground(new java.awt.Color(38, 38, 38));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
-        jButton3.setPreferredSize(new java.awt.Dimension(40, 40));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Sales_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Sales_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_Summer_Sales_28px.png"))); // NOI18N
+        Sales_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Sales_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                Sales_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3);
+        jPanel2.add(Sales_Btn);
 
-        jButton4.setBackground(new java.awt.Color(38, 38, 38));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_Summer_Sales_28px.png"))); // NOI18N
-        jButton4.setPreferredSize(new java.awt.Dimension(40, 40));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Payment_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Payment_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
+        Payment_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Payment_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                Payment_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4);
+        jPanel2.add(Payment_Btn);
 
-        jButton5.setBackground(new java.awt.Color(38, 38, 38));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_about_28px.png"))); // NOI18N
-        jButton5.setPreferredSize(new java.awt.Dimension(40, 40));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        About_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        About_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_about_28px.png"))); // NOI18N
+        About_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        About_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                About_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5);
+        jPanel2.add(About_Btn);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -384,30 +384,6 @@ public class Employee extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
@@ -431,6 +407,30 @@ public class Employee extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void Menu_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Menu_BtnActionPerformed
+
+    private void Home_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Home_BtnActionPerformed
+
+    private void Employee_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Employee_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Employee_BtnActionPerformed
+
+    private void Sales_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sales_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Sales_BtnActionPerformed
+
+    private void Payment_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Payment_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Payment_BtnActionPerformed
+
+    private void About_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_About_BtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_About_BtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -468,12 +468,12 @@ public class Employee extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton About_Btn;
+    private javax.swing.JButton Employee_Btn;
+    private javax.swing.JButton Home_Btn;
+    private javax.swing.JButton Menu_Btn;
+    private javax.swing.JButton Payment_Btn;
+    private javax.swing.JButton Sales_Btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
