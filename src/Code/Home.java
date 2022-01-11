@@ -43,7 +43,7 @@ public class Home extends javax.swing.JFrame {
 
                 @Override
                 public void mouseEntered(MouseEvent e) {
-                    btn.setBackground(new Color(28, 45, 74));
+                    btn.setBackground(new Color(38, 38, 38));
                 }
 
                 @Override
@@ -84,7 +84,7 @@ public class Home extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Stock = new javax.swing.JTable();
+        Products = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -241,8 +241,8 @@ public class Home extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(76, 76, 76));
 
-        Stock.setBackground(new java.awt.Color(190, 190, 190));
-        Stock.setModel(new javax.swing.table.DefaultTableModel(
+        Products.setBackground(new java.awt.Color(190, 190, 190));
+        Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -250,10 +250,14 @@ public class Home extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Stock_ID", "Stock_Name", "Stock_Type", "Price", ""
+                "Product ID", "Product Name", "Product Type", "Cost", ""
             }
         ));
-        jScrollPane1.setViewportView(Stock);
+        Products.setIntercellSpacing(new java.awt.Dimension(3, 3));
+        jScrollPane1.setViewportView(Products);
+        if (Products.getColumnModel().getColumnCount() > 0) {
+            Products.getColumnModel().getColumn(4).setHeaderValue("");
+        }
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 2, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -264,13 +268,13 @@ public class Home extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(25, 25, 25)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -388,7 +392,7 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable Stock;
+    public javax.swing.JTable Products;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

@@ -122,7 +122,12 @@ public class Login extends javax.swing.JFrame {
         });
 
         usertype.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        usertype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Customer", "Owner", "Employee", "Supplier" }));
+        usertype.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Owner", "Customer", "Employee" }));
+        usertype.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usertypeActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -260,6 +265,10 @@ public class Login extends javax.swing.JFrame {
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void usertypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usertypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usertypeActionPerformed
 
     /**
      * @param args the command line arguments

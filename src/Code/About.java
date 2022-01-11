@@ -4,6 +4,12 @@
  */
 package Code;
 
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.plaf.basic.BasicButtonUI;
+
 /**
  *
  * @author Tarun
@@ -15,6 +21,37 @@ public class About extends javax.swing.JFrame {
      */
     public About() {
         initComponents();
+        JButton [] btns = {jButton1, jButton2, jButton3, jButton5, jButton4, jButton6};
+        for (JButton btn : btns) {
+            btn.setBackground(new Color(0, 0, 0));
+            btn.setUI(new BasicButtonUI());
+            btn.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    btn.setBackground(new Color(38, 38, 38));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    btn.setBackground(new Color(0, 0, 0));
+                }
+            });
+        }
     }
 
     /**

@@ -43,7 +43,7 @@ public class Sales extends javax.swing.JFrame {
 
                 @Override
                 public void mouseEntered(MouseEvent e) {
-                    btn.setBackground(new Color(28, 45, 74));
+                    btn.setBackground(new Color(38, 38, 38));
                 }
 
                 @Override
