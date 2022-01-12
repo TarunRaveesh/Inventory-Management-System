@@ -76,12 +76,13 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(415, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("LOGIN");
 
-        Signup_Btn.setBackground(new java.awt.Color(102, 255, 255));
+        Signup_Btn.setBackground(new java.awt.Color(255, 0, 0));
         Signup_Btn.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        Signup_Btn.setForeground(new java.awt.Color(255, 255, 255));
         Signup_Btn.setText("Sign Up");
         Signup_Btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -210,7 +211,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(Signup_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62))
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addGap(436, 436, 436)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -218,9 +219,9 @@ public class Login extends javax.swing.JFrame {
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Sidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(BackgroundLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
+                .addGap(72, 72, 72)
                 .addComponent(jLabel1)
-                .addGap(20, 20, 20)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(126, 126, 126)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

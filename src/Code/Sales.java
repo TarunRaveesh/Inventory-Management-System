@@ -75,7 +75,7 @@ public class Sales extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        Sales = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -157,34 +157,42 @@ public class Sales extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Sales Details");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        Sales.setBackground(new java.awt.Color(190, 190, 190));
+        this.Sales.setRowHeight(30);
+        Sales.setFont(new java.awt.Font("Segoe UI", 0, 14));
+        Sales.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Product ID", "Product Name", "Product Type", "Price"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        Sales.setGridColor(new java.awt.Color(204, 204, 204));
+        Sales.setIntercellSpacing(new java.awt.Dimension(3, 3));
+        Sales.setSelectionBackground(new java.awt.Color(153, 153, 153));
+        Sales.setShowGrid(true);
+        jScrollPane1.setViewportView(Sales);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                            .addGap(27, 27, 27)
-                            .addComponent(jLabel4)))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel4)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGap(0, 25, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,8 +201,8 @@ public class Sales extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(4, 4, 4)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -291,6 +299,7 @@ public class Sales extends javax.swing.JFrame {
     private javax.swing.JButton Home_Btn;
     private javax.swing.JButton Menu_Btn;
     private javax.swing.JButton Payment_Btn;
+    public javax.swing.JTable Sales;
     private javax.swing.JButton Sales_Btn;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
@@ -298,6 +307,5 @@ public class Sales extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

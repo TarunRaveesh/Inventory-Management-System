@@ -5,10 +5,18 @@
 package Code;
 
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.DefaultCellEditor;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicButtonUI;
+import javax.swing.table.TableCellRenderer;
 
 /**
  *
@@ -242,22 +250,35 @@ public class Home extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(76, 76, 76));
 
         Products.setBackground(new java.awt.Color(190, 190, 190));
+        Products.setRowHeight(30);
+        Products.setFont(new java.awt.Font("Segoe UI", 0, 14));
         Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, "Buy Now"},
+                {null, null, null, null, "Buy Now"},
+                {null, null, null, null, "Buy Now"},
+                {null, null, null, null, "Buy Now"},
+                {null, null, null, null, "Buy Now"}
             },
             new String [] {
                 "Product ID", "Product Name", "Product Type", "Price", ""
             }
         ));
-        Products.setIntercellSpacing(new java.awt.Dimension(3, 3));
-        jScrollPane1.setViewportView(Products);
+        Products.setGridColor(new java.awt.Color(204, 204, 204));
+        Products.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());;
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 2, 18)); // NOI18N
+        Products.getColumnModel().getColumn(4).setCellEditor(new ButtonEditor(new JTextField()));
+        Products.setIntercellSpacing(new java.awt.Dimension(3, 3));
+        Products.setSelectionBackground(new java.awt.Color(153, 153, 153));
+        Products.setShowGrid(true);
+        jScrollPane1.setViewportView(Products);
+        if (Products.getColumnModel().getColumnCount() > 0) {
+            Products.getColumnModel().getColumn(4).setMinWidth(100);
+            Products.getColumnModel().getColumn(4).setPreferredWidth(100);
+            Products.getColumnModel().getColumn(4).setMaxWidth(100);
+        }
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Browse Stocks:");
 
@@ -280,8 +301,8 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(326, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -318,7 +339,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
         jPanel1.add(jPanel5, java.awt.BorderLayout.CENTER);
@@ -412,4 +433,72 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator3;
     // End of variables declaration//GEN-END:variables
+}
+
+class ButtonRenderer extends JButton implements  TableCellRenderer {
+  public ButtonRenderer() {
+    setOpaque(true);
+  }
+  
+  @Override
+  public Component getTableCellRendererComponent(JTable table, Object obj, boolean selected, boolean focused, int row, int col) {
+      setText((obj == null) ? "":obj.toString());
+    return this;
+  }
+
+}
+
+class ButtonEditor extends DefaultCellEditor
+{
+  protected JButton btn;
+   private String lbl;
+   private Boolean clicked;
+
+   public ButtonEditor(JTextField txt) {
+    super(txt);
+    
+    btn = new JButton();
+    btn.setOpaque(true);
+    txt.setBackground(new Color(190, 190, 190));
+    btn.setBackground(Color.green);
+
+    btn.addActionListener(new ActionListener() {
+
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        fireEditingStopped();
+      }
+    });
+  }
+   @Override
+  public Component getTableCellEditorComponent(JTable table, Object obj,
+      boolean selected, int row, int col) {
+
+     lbl = (obj == null) ? "":obj.toString();
+     btn.setText(lbl);
+     clicked = true;
+    return btn;
+  }
+
+   @Override
+  public Object getCellEditorValue() {
+
+     if(clicked)
+      {
+        JOptionPane.showMessageDialog(btn, "Redirecting...");
+      }
+     clicked = false;
+    return new String(lbl);
+  }
+
+   @Override
+  public boolean stopCellEditing() {
+      clicked = false;
+    return super.stopCellEditing();
+  }
+
+   @Override
+  protected void fireEditingStopped() {
+    super.fireEditingStopped();
+  }
 }
