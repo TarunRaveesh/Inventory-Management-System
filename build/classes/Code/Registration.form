@@ -174,7 +174,7 @@
                                       <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" pref="80" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="customer_password" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="password" min="-2" pref="200" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel2" min="-2" pref="80" max="-2" attributes="0"/>
@@ -218,7 +218,7 @@
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="username" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="customer_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="password" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -284,7 +284,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="customer_password">
+                <Component class="javax.swing.JTextField" name="password">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="16" style="0"/>
@@ -296,7 +296,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="customer_passwordActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton1">

@@ -38,7 +38,7 @@ public class Registration extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
-        customer_password = new javax.swing.JTextField();
+        password = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         username = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -101,11 +101,11 @@ public class Registration extends javax.swing.JFrame {
             }
         });
 
-        customer_password.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        customer_password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        customer_password.addActionListener(new java.awt.event.ActionListener() {
+        password.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customer_passwordActionPerformed(evt);
+                passwordActionPerformed(evt);
             }
         });
 
@@ -190,7 +190,7 @@ public class Registration extends javax.swing.JFrame {
                             .addGap(75, 75, 75)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(customer_password, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -223,7 +223,7 @@ public class Registration extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(customer_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -321,9 +321,9 @@ public class Registration extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void customer_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customer_passwordActionPerformed
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_customer_passwordActionPerformed
+    }//GEN-LAST:event_passwordActionPerformed
 
     private void customer_email1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customer_email1ActionPerformed
         // TODO add your handling code here:
@@ -375,7 +375,6 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JTextField customer_email;
     private javax.swing.JTextField customer_email1;
     private javax.swing.JTextField customer_name;
-    private javax.swing.JTextField customer_password;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
@@ -389,6 +388,7 @@ public class Registration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField password;
     private javax.swing.JTextField phone_no;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
