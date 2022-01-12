@@ -176,7 +176,7 @@ public class Payment extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Customer Name");
+        jLabel1.setText("Username");
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
