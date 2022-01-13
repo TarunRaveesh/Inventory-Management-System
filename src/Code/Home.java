@@ -4,6 +4,12 @@
  */
 package Code;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -16,6 +22,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicButtonUI;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
 /**
@@ -87,13 +94,13 @@ public class Home extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        Shop_Btn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         Product_Frame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Products = new javax.swing.JTable();
+        Inventory = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -194,18 +201,18 @@ public class Home extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Hi there !!\nWelcome to the Inventory...\nBrowse through your favourite products and place orders to revceive them at your doorstep. Our inventory has a wide range of options to meet your needs and desires at the most affordable and comendable prices, so what are you waiting for...\n");
+        jTextArea1.setText("Hi there !!\nWelcome to the Inventory...\nBrowse through your favourite products and place orders to revceive them at your doorstep. Our inventory has a wide range of options to meet your needs and desires at the most affordable and comendable prices, so what are you waiting for... ?");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
         jTextArea1.setRequestFocusEnabled(false);
         jScrollPane2.setViewportView(jTextArea1);
 
-        jButton2.setBackground(new java.awt.Color(51, 255, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton2.setText("Happy Shopping : )");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Shop_Btn.setBackground(new java.awt.Color(51, 255, 255));
+        Shop_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        Shop_Btn.setText("Shop Now : )");
+        Shop_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Shop_BtnActionPerformed(evt);
             }
         });
 
@@ -218,7 +225,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(Shop_Btn)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -226,10 +233,10 @@ public class Home extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(Shop_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(76, 76, 76));
@@ -250,10 +257,10 @@ public class Home extends javax.swing.JFrame {
         Product_Frame.setPreferredSize(new java.awt.Dimension(1085, 214));
         Product_Frame.setVisible(true);
 
-        Products.setBackground(new java.awt.Color(190, 190, 190));
-        Products.setRowHeight(30);
-        Products.setFont(new java.awt.Font("Segoe UI", 0, 14));
-        Products.setModel(new javax.swing.table.DefaultTableModel(
+        Inventory.setBackground(new java.awt.Color(190, 190, 190));
+        Inventory.setRowHeight(30);
+        Inventory.setFont(new java.awt.Font("Segoe UI", 0, 14));
+        Inventory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, ""},
                 {null, null, null, null, ""},
@@ -262,23 +269,16 @@ public class Home extends javax.swing.JFrame {
                 {null, null, null, null, ""}
             },
             new String [] {
-                "Product ID", "Product Name", "Product Type", "Price", ""
+                "Product ID", "Product Name", "Product Type", "Price", "Place Order"
             }
         ));
-        Products.setGridColor(new java.awt.Color(204, 204, 204));
-        Products.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());;
-
-        Products.getColumnModel().getColumn(4).setCellEditor(new ButtonEditor(new JTextField()));
-        Products.setIntercellSpacing(new java.awt.Dimension(3, 3));
-        Products.setSelectionBackground(new java.awt.Color(153, 153, 153));
-        Products.setShowGrid(true);
-        jScrollPane1.setViewportView(Products);
-        if (Products.getColumnModel().getColumnCount() > 0) {
-            Products.getColumnModel().getColumn(4).setMinWidth(100);
-            Products.getColumnModel().getColumn(4).setPreferredWidth(100);
-            Products.getColumnModel().getColumn(4).setMaxWidth(100);
-            Products.getColumnModel().getColumn(4).setHeaderValue("Place Order");
-        }
+        Inventory.setGridColor(new java.awt.Color(204, 204, 204));
+        Inventory.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());
+        Inventory.getColumnModel().getColumn(4).setCellEditor(new ButtonEditor(new JTextField()));
+        Inventory.setIntercellSpacing(new java.awt.Dimension(3, 3));
+        Inventory.setSelectionBackground(new java.awt.Color(153, 153, 153));
+        Inventory.setShowGrid(true);
+        jScrollPane1.setViewportView(Inventory);
 
         javax.swing.GroupLayout Product_FrameLayout = new javax.swing.GroupLayout(Product_Frame.getContentPane());
         Product_Frame.getContentPane().setLayout(Product_FrameLayout);
@@ -316,7 +316,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
         );
@@ -408,9 +408,37 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void Shop_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Shop_BtnActionPerformed
+	try {
+                DefaultTableModel Model = new DefaultTableModel(new String[]{"Product ID", "Product Name", "Product Type", "Price", "Place Order"}, 0);
+                
+                Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
+                    "postgres", "tarun2875");
+
+                PreparedStatement st = (PreparedStatement) connection
+                        .prepareStatement("SELECT * FROM Inventory");
+                ResultSet rs = st.executeQuery();
+                
+                
+                while(rs.next())
+                {
+                    String a = rs.getString("product_id");
+                    String b = rs.getString("product_name");
+                    String c = rs.getString("product_type");
+                    String d = rs.getString("price");
+                    String e = rs.getString("place_order");
+                    Model.addRow(new Object[]{a, b, c, d, e});
+                }
+                
+                Inventory.setModel(Model);
+                Inventory.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());
+                Inventory.getColumnModel().getColumn(4).setCellEditor(new ButtonEditor(new JTextField()));
+                Inventory.setIntercellSpacing(new java.awt.Dimension(3, 3));
+
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            }
+    }//GEN-LAST:event_Shop_BtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -451,13 +479,13 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton About_Btn;
     private javax.swing.JButton Employee_Btn;
     private javax.swing.JButton Home_Btn;
+    public javax.swing.JTable Inventory;
     private javax.swing.JButton Menu_Btn;
     private javax.swing.JButton Payment_Btn;
     private javax.swing.JInternalFrame Product_Frame;
-    public javax.swing.JTable Products;
     private javax.swing.JButton Sales_Btn;
+    private javax.swing.JButton Shop_Btn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
