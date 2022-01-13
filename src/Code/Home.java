@@ -103,6 +103,7 @@ public class Home extends javax.swing.JFrame {
         Inventory = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(325, 100));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -259,7 +260,7 @@ public class Home extends javax.swing.JFrame {
 
         Inventory.setBackground(new java.awt.Color(190, 190, 190));
         Inventory.setRowHeight(30);
-        Inventory.setFont(new java.awt.Font("Segoe UI", 0, 14));
+        Inventory.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15));
         Inventory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, ""},

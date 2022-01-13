@@ -56,6 +56,7 @@ public class Registration extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(325, 100));
 
         Head.setBackground(new java.awt.Color(0, 0, 0));
 
