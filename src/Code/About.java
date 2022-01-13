@@ -82,13 +82,13 @@ public class About extends javax.swing.JFrame {
         jPanel2.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 20, 20));
 
         jPanel4.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel4.setPreferredSize(new java.awt.Dimension(50, 150));
-        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 5, 0));
+        jPanel4.setPreferredSize(new java.awt.Dimension(60, 150));
+        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
 
         Menu_Btn.setBackground(new java.awt.Color(38, 38, 38));
         Menu_Btn.setForeground(new java.awt.Color(255, 255, 255));
         Menu_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_menu_28px_2.png"))); // NOI18N
-        Menu_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Menu_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
         Menu_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Menu_BtnActionPerformed(evt);
@@ -101,7 +101,7 @@ public class About extends javax.swing.JFrame {
         Home_Btn.setBackground(new java.awt.Color(38, 38, 38));
         Home_Btn.setForeground(new java.awt.Color(255, 255, 255));
         Home_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_home_28px.png"))); // NOI18N
-        Home_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Home_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
         Home_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Home_BtnActionPerformed(evt);
@@ -111,7 +111,7 @@ public class About extends javax.swing.JFrame {
 
         Employee_Btn.setBackground(new java.awt.Color(38, 38, 38));
         Employee_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_profile_28px.png"))); // NOI18N
-        Employee_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Employee_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
         Employee_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Employee_BtnActionPerformed(evt);
@@ -120,8 +120,8 @@ public class About extends javax.swing.JFrame {
         jPanel2.add(Employee_Btn);
 
         Sales_Btn.setBackground(new java.awt.Color(38, 38, 38));
-        Sales_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_Summer_Sales_28px.png"))); // NOI18N
-        Sales_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Sales_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
+        Sales_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
         Sales_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Sales_BtnActionPerformed(evt);
@@ -130,8 +130,8 @@ public class About extends javax.swing.JFrame {
         jPanel2.add(Sales_Btn);
 
         Payment_Btn.setBackground(new java.awt.Color(38, 38, 38));
-        Payment_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
-        Payment_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        Payment_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_Summer_Sales_28px.png"))); // NOI18N
+        Payment_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
         Payment_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Payment_BtnActionPerformed(evt);
@@ -141,7 +141,7 @@ public class About extends javax.swing.JFrame {
 
         About_Btn.setBackground(new java.awt.Color(38, 38, 38));
         About_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_about_28px.png"))); // NOI18N
-        About_Btn.setPreferredSize(new java.awt.Dimension(40, 40));
+        About_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
         About_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 About_BtnActionPerformed(evt);
@@ -150,6 +150,7 @@ public class About extends javax.swing.JFrame {
         jPanel2.add(About_Btn);
 
         jPanel5.setBackground(new java.awt.Color(38, 38, 38));
+        jPanel5.setPreferredSize(new java.awt.Dimension(1190, 790));
 
         jLabel4.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,11 +161,11 @@ public class About extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(985, Short.MAX_VALUE))
+                .addContainerGap(990, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,7 +174,7 @@ public class About extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(711, Short.MAX_VALUE))
+                .addContainerGap(713, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -195,9 +196,9 @@ public class About extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
