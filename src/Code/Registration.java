@@ -1,5 +1,10 @@
 package Code;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+import javax.swing.JOptionPane;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -318,7 +323,44 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_phone_noActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        String Name = cust_name.getText();
+        String Username = username.getText();
+        String Password = password.getText();
+        String Email = cust_email.getText();
+        String Phone = phone_no.getText();
+        String Address = cust_address.getText();
+        int len = Phone.length();
+
+        String msg = "" + Name;
+        msg += " \n";
+        if (len == 10) {
+            try {
+                Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
+                        "postgres", "tarun2875");
+
+                String query = "INSERT INTO Customer VALUES('" + Name + "','" + Username + "','" + Password
+                        + "','" + Email + "','" + Phone + "','" + Address + "')";
+
+                Statement sta = connection.createStatement();
+                int x = sta.executeUpdate(query);
+                if (x == 0) {
+                    JOptionPane.showMessageDialog(jButton1, "This instance already exists");
+                } else {
+                    JOptionPane.showMessageDialog(jButton1,
+                            "Welcome, " + msg + "You are Successfully Registered");
+                    Login SignUp = new Login();
+                    Registration.this.setVisible(false);
+                    SignUp.setVisible(true);
+                }
+
+                connection.close();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+
+            }
+        } else {
+            JOptionPane.showMessageDialog(jButton1, "Invalid Phone No.");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cust_addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cust_addressActionPerformed

@@ -1,5 +1,11 @@
 package Code;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
@@ -270,24 +276,94 @@ public class Login extends javax.swing.JFrame {
 
     private void Login_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_BtnActionPerformed
         String value= usertype.getSelectedItem().toString();        
-        if (value.equals("Customer"))
-        {
-            JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
-            Home h = new Home();
-            h.setVisible(true);
-        }
-        else if (value.equals("Owner"))
+
+        if (value.equals("Owner"))
         { 
-            
-            JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
-            Owner h = new Owner();
-            h.setVisible(true);
+            String Username = username.getText();
+            String Password = password.getText();
+            try {
+                Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
+                    "postgres", "tarun2875");
+
+                PreparedStatement st = (PreparedStatement) connection
+                    .prepareStatement("SELECT username, password FROM Owner WHERE username = ? AND password = ?") ;
+
+                st.setString(1, Username);
+                st.setString(2, Password);
+
+                ResultSet rs = st.executeQuery();
+
+                if (rs.next()) {
+                    dispose();
+                    Owner ah = new Owner();
+                    ah.setTitle("Welcome");
+                    ah.setVisible(true);
+                    JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
+                } else {
+                    JOptionPane.showMessageDialog(Login_Btn, "Invalid Credentials");
+                }
+
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            }
         }
+
+        else if (value.equals("Customer"))
+        {
+            String Username = username.getText();
+            String Password = password.getText();
+            try {
+                Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
+                    "postgres", "tarun2875");
+
+                PreparedStatement st = (PreparedStatement) connection
+                    .prepareStatement("SELECT username, password FROM Customer WHERE username = ? AND password = ?");
+
+                st.setString(1, Username);
+                st.setString(2, Password);
+                ResultSet rs = st.executeQuery();
+
+                if (rs.next()) {
+                    dispose();
+                    Home ah = new Home();
+                    ah.setTitle("Welcome");
+                    ah.setVisible(true);
+                    JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
+                } else {
+                    JOptionPane.showMessageDialog(Login_Btn, "Wrong Username or Password");
+                }
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            }
+
+        }
+
         else if (value.equals("Employee"))
         {
-            JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
-            Employee h = new Employee();
-            h.setVisible(true);
+            String Username = username.getText();
+            String Password = password.getText();
+            try {
+                Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
+                    "postgres", "tarun2875");
+
+                PreparedStatement st = (PreparedStatement) connection
+                    .prepareStatement("SELECT username, password FROM Employee WHERE username = ? AND password = ?");
+
+                st.setString(1, Username);
+                st.setString(2, Password);
+                ResultSet rs = st.executeQuery();
+                if (rs.next()) {
+                    dispose();
+                    Employee ah = new Employee();
+                    ah.setTitle("Welcome");
+                    ah.setVisible(true);
+                    JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
+                } else {
+                    JOptionPane.showMessageDialog(Login_Btn, "Invalid Credentials");
+                }
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            }
         }
         else
         {
