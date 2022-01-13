@@ -257,23 +257,38 @@ public class About extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_BtnActionPerformed
 
     private void Home_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Home ah = new Home();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_Home_BtnActionPerformed
 
     private void Employee_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Employee_BtnActionPerformed
-        // TODO add your handling code here:
+       dispose();
+    	Employee ah = new Employee();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_Employee_BtnActionPerformed
 
     private void Sales_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sales_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Sales ah = new Sales();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_Sales_BtnActionPerformed
 
     private void Payment_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Payment_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Payment ah = new Payment();
+          ah.setTitle("proceed to pay");
+          ah.setVisible(true);
     }//GEN-LAST:event_Payment_BtnActionPerformed
 
     private void About_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_About_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	About ah = new About();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_About_BtnActionPerformed
 
     /**

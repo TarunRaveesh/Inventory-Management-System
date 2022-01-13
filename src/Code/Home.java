@@ -91,7 +91,7 @@ public class Home extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
+        Product_Frame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         Products = new javax.swing.JTable();
 
@@ -194,7 +194,7 @@ public class Home extends javax.swing.JFrame {
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Hey Customer, Glad to have you here...\n\nBrowse through your favourite products and place orders to revceive them at your doorstep. Our inventory has a wide range of options to meet your needs and desires at the most affordable and comendable prices, so what are you waiting for...\n");
+        jTextArea1.setText("Hi there !!\nWelcome to the Inventory...\nBrowse through your favourite products and place orders to revceive them at your doorstep. Our inventory has a wide range of options to meet your needs and desires at the most affordable and comendable prices, so what are you waiting for...\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setAutoscrolls(false);
         jTextArea1.setRequestFocusEnabled(false);
@@ -202,7 +202,7 @@ public class Home extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(51, 255, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton2.setText("Happy Shopping  : )");
+        jButton2.setText("Happy Shopping : )");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -247,19 +247,19 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jInternalFrame1.setPreferredSize(new java.awt.Dimension(1085, 214));
-        jInternalFrame1.setVisible(true);
+        Product_Frame.setPreferredSize(new java.awt.Dimension(1085, 214));
+        Product_Frame.setVisible(true);
 
         Products.setBackground(new java.awt.Color(190, 190, 190));
         Products.setRowHeight(30);
         Products.setFont(new java.awt.Font("Segoe UI", 0, 14));
         Products.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, "Buy Now"},
-                {null, null, null, null, "Buy Now"},
-                {null, null, null, null, "Buy Now"},
-                {null, null, null, null, "Buy Now"},
-                {null, null, null, null, "Buy Now"}
+                {null, null, null, null, ""},
+                {null, null, null, null, ""},
+                {null, null, null, null, ""},
+                {null, null, null, null, ""},
+                {null, null, null, null, ""}
             },
             new String [] {
                 "Product ID", "Product Name", "Product Type", "Price", ""
@@ -277,19 +277,20 @@ public class Home extends javax.swing.JFrame {
             Products.getColumnModel().getColumn(4).setMinWidth(100);
             Products.getColumnModel().getColumn(4).setPreferredWidth(100);
             Products.getColumnModel().getColumn(4).setMaxWidth(100);
+            Products.getColumnModel().getColumn(4).setHeaderValue("Place Order");
         }
 
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Product_FrameLayout = new javax.swing.GroupLayout(Product_Frame.getContentPane());
+        Product_Frame.getContentPane().setLayout(Product_FrameLayout);
+        Product_FrameLayout.setHorizontalGroup(
+            Product_FrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Product_FrameLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1069, Short.MAX_VALUE))
         );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+        Product_FrameLayout.setVerticalGroup(
+            Product_FrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Product_FrameLayout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
@@ -304,7 +305,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25))
         );
@@ -314,7 +315,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
@@ -369,23 +370,38 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_BtnActionPerformed
 
     private void Home_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Home ah = new Home();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_Home_BtnActionPerformed
 
     private void Employee_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Employee_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Employee ah = new Employee();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_Employee_BtnActionPerformed
 
     private void Sales_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sales_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Sales ah = new Sales();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_Sales_BtnActionPerformed
 
     private void Payment_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Payment_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	Payment ah = new Payment();
+          ah.setTitle("proceed to pay");
+          ah.setVisible(true);
     }//GEN-LAST:event_Payment_BtnActionPerformed
 
     private void About_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_About_BtnActionPerformed
-        // TODO add your handling code here:
+        dispose();
+    	About ah = new About();
+          ah.setTitle("Welcome");
+          ah.setVisible(true);
     }//GEN-LAST:event_About_BtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -437,11 +453,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton Home_Btn;
     private javax.swing.JButton Menu_Btn;
     private javax.swing.JButton Payment_Btn;
-    private javax.swing.JTable Products;
+    private javax.swing.JInternalFrame Product_Frame;
+    public javax.swing.JTable Products;
     private javax.swing.JButton Sales_Btn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
