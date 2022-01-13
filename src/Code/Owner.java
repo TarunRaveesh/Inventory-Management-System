@@ -21,7 +21,7 @@ public class Owner extends javax.swing.JFrame {
      */
     public Owner() {
         initComponents();
-        JButton [] btns = {Home_Btn, Employee_Btn, Sales_Btn, About_Btn, Payment_Btn, Menu_Btn};
+        JButton [] btns = {Home_Btn, Employee_Btn, Stock_Btn, About_Btn, Payment_Btn, Menu_Btn};
         for (JButton btn : btns) {
             btn.setBackground(new Color(0, 0, 0));
             btn.setUI(new BasicButtonUI());
@@ -68,7 +68,7 @@ public class Owner extends javax.swing.JFrame {
         Menu_Btn = new javax.swing.JButton();
         Home_Btn = new javax.swing.JButton();
         Employee_Btn = new javax.swing.JButton();
-        Sales_Btn = new javax.swing.JButton();
+        Stock_Btn = new javax.swing.JButton();
         Payment_Btn = new javax.swing.JButton();
         About_Btn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -134,15 +134,15 @@ public class Owner extends javax.swing.JFrame {
         });
         jPanel2.add(Employee_Btn);
 
-        Sales_Btn.setBackground(new java.awt.Color(38, 38, 38));
-        Sales_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
-        Sales_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
-        Sales_Btn.addActionListener(new java.awt.event.ActionListener() {
+        Stock_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Stock_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
+        Stock_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
+        Stock_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Sales_BtnActionPerformed(evt);
+                Stock_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(Sales_Btn);
+        jPanel2.add(Stock_Btn);
 
         Payment_Btn.setBackground(new java.awt.Color(38, 38, 38));
         Payment_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_Summer_Sales_28px.png"))); // NOI18N
@@ -201,7 +201,7 @@ public class Owner extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(0, 123, 255));
         jButton7.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton7.setText("Manage Empolyees");
+        jButton7.setText("Manage Stock");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -210,7 +210,7 @@ public class Owner extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addGap(20, 20, 20))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,9 +338,9 @@ public class Owner extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(85, 85, 85)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -461,12 +461,12 @@ public class Owner extends javax.swing.JFrame {
           ah.setVisible(true);
     }//GEN-LAST:event_Payment_BtnActionPerformed
 
-    private void Sales_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sales_BtnActionPerformed
+    private void Stock_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stock_BtnActionPerformed
         dispose();
-    	Sales ah = new Sales();
+    	Stock ah = new Stock();
           ah.setTitle("Welcome");
           ah.setVisible(true);
-    }//GEN-LAST:event_Sales_BtnActionPerformed
+    }//GEN-LAST:event_Stock_BtnActionPerformed
 
     private void About_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_About_BtnActionPerformed
         dispose();
@@ -529,7 +529,7 @@ public class Owner extends javax.swing.JFrame {
     private javax.swing.JButton Home_Btn;
     private javax.swing.JButton Menu_Btn;
     private javax.swing.JButton Payment_Btn;
-    private javax.swing.JButton Sales_Btn;
+    private javax.swing.JButton Stock_Btn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton7;

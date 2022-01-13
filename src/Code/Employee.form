@@ -786,7 +786,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Employee_BtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Sales_Btn">
+        <Component class="javax.swing.JButton" name="Stock_Btn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="26" green="26" red="26" type="rgb"/>
@@ -799,7 +799,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Sales_BtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Stock_BtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Payment_Btn">

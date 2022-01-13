@@ -36,7 +36,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
-        JButton [] btns = {Home_Btn, Employee_Btn, Payment_Btn, About_Btn, Sales_Btn, Menu_Btn};
+        JButton [] btns = {Home_Btn, Employee_Btn, Payment_Btn, About_Btn, Stock_Btn, Menu_Btn};
         for (JButton btn : btns) {
             btn.setBackground(new Color(0, 0, 0));
             btn.setUI(new BasicButtonUI());
@@ -84,7 +84,7 @@ public class Home extends javax.swing.JFrame {
         Menu_Btn = new javax.swing.JButton();
         Home_Btn = new javax.swing.JButton();
         Employee_Btn = new javax.swing.JButton();
-        Sales_Btn = new javax.swing.JButton();
+        Stock_Btn = new javax.swing.JButton();
         Payment_Btn = new javax.swing.JButton();
         About_Btn = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -148,15 +148,15 @@ public class Home extends javax.swing.JFrame {
         });
         jPanel2.add(Employee_Btn);
 
-        Sales_Btn.setBackground(new java.awt.Color(38, 38, 38));
-        Sales_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
-        Sales_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
-        Sales_Btn.addActionListener(new java.awt.event.ActionListener() {
+        Stock_Btn.setBackground(new java.awt.Color(38, 38, 38));
+        Stock_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_fast_cart_28px.png"))); // NOI18N
+        Stock_Btn.setPreferredSize(new java.awt.Dimension(50, 50));
+        Stock_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Sales_BtnActionPerformed(evt);
+                Stock_BtnActionPerformed(evt);
             }
         });
-        jPanel2.add(Sales_Btn);
+        jPanel2.add(Stock_Btn);
 
         Payment_Btn.setBackground(new java.awt.Color(38, 38, 38));
         Payment_Btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8_Summer_Sales_28px.png"))); // NOI18N
@@ -383,13 +383,6 @@ public class Home extends javax.swing.JFrame {
           ah.setVisible(true);
     }//GEN-LAST:event_Employee_BtnActionPerformed
 
-    private void Sales_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sales_BtnActionPerformed
-        dispose();
-    	Sales ah = new Sales();
-          ah.setTitle("Welcome");
-          ah.setVisible(true);
-    }//GEN-LAST:event_Sales_BtnActionPerformed
-
     private void Payment_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Payment_BtnActionPerformed
         dispose();
     	Payment ah = new Payment();
@@ -440,6 +433,13 @@ public class Home extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_Shop_BtnActionPerformed
 
+    private void Stock_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stock_BtnActionPerformed
+        dispose();
+        Stock ah = new Stock();
+        ah.setTitle("Welcome");
+        ah.setVisible(true);
+    }//GEN-LAST:event_Stock_BtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -483,8 +483,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton Menu_Btn;
     private javax.swing.JButton Payment_Btn;
     private javax.swing.JInternalFrame Product_Frame;
-    private javax.swing.JButton Sales_Btn;
     private javax.swing.JButton Shop_Btn;
+    private javax.swing.JButton Stock_Btn;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
