@@ -310,7 +310,7 @@ public class Employee extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(255, 153, 255));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton3.setText("Review Sales  >");
+        jButton3.setText("Manage Stock  >");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -345,7 +345,7 @@ public class Employee extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Manage the Orders Placed");
+        jLabel15.setText("Add or Remove Stocks");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);

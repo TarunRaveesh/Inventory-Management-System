@@ -225,7 +225,7 @@ public class Owner extends javax.swing.JFrame {
 
         jButton9.setBackground(new java.awt.Color(102, 255, 51));
         jButton9.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jButton9.setText("Review Orders");
+        jButton9.setText("Manage Employee");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -376,7 +376,7 @@ public class Owner extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Hello Owner");
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 51));
+        jButton1.setBackground(new java.awt.Color(255, 193, 7));
         jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         jButton1.setText("Log Out");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
