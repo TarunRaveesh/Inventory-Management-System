@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileWriter;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicButtonUI;
@@ -86,7 +87,7 @@ public class Payment extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        Invoice_Text = new javax.swing.JTextArea();
+        Invoice = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -251,6 +252,11 @@ public class Payment extends javax.swing.JFrame {
         Invoice_Btn.setBackground(new java.awt.Color(255, 193, 7));
         Invoice_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Invoice_Btn.setText("Invoice");
+        Invoice_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Invoice_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -351,9 +357,9 @@ public class Payment extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        Invoice_Text.setColumns(20);
-        Invoice_Text.setRows(5);
-        jScrollPane6.setViewportView(Invoice_Text);
+        Invoice.setColumns(20);
+        Invoice.setRows(5);
+        jScrollPane6.setViewportView(Invoice);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -536,6 +542,55 @@ public class Payment extends javax.swing.JFrame {
         
     }//GEN-LAST:event_usernameActionPerformed
 
+    private void Invoice_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Invoice_BtnActionPerformed
+                Invoice.setText(
+                      "-------------------------------"
+                    + "----------- INVOICE -----------"
+                    + "-------------------------------\n");
+  
+                Invoice.setText(Invoice.getText()
+                              + "Username: "
+                              + username.getText()
+                              + "\n");
+                Invoice.setText(Invoice.getText()
+                              + "Payment Amount: "
+                              + amount.getText()
+                              + "\n");
+                Invoice.setText(Invoice.getText()
+                              + "Mode of Payment: "
+                              + mode_of_pay.getSelectedItem()
+                                    .toString()
+                              + "\n");
+                Invoice.setText(Invoice.getText()
+                              + "Card No.: "
+                              + card_no.getText()
+                              + "\n");
+                Invoice.setText(Invoice.getText()
+                              + "Expiration Date: "
+                              + exp_date.getText()
+                              + "\n");
+                Invoice.setText(Invoice.getText()
+                              + "CVV: "
+                              + cvv.getText()
+                              + "\n");
+                
+                 if (evt.getSource() == Invoice_Btn) {
+                    try {
+                        FileWriter fw
+                            = new FileWriter(
+                                "Invoice.txt", true);
+                        fw.write(Invoice.getText());
+                        fw.close();
+                    }
+                    catch (Exception ae) {
+                        System.out.println(ae);
+                    }
+                }
+                
+                JOptionPane.showMessageDialog(
+                    Invoice, "DATA SAVED SUCCESSFULLY");
+    }//GEN-LAST:event_Invoice_BtnActionPerformed
+
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -566,8 +621,8 @@ public class Payment extends javax.swing.JFrame {
     private javax.swing.JButton About_Btn;
     private javax.swing.JButton Employee_Btn;
     private javax.swing.JButton Home_Btn;
+    private javax.swing.JTextArea Invoice;
     private javax.swing.JButton Invoice_Btn;
-    private javax.swing.JTextArea Invoice_Text;
     private javax.swing.JButton Menu_Btn;
     private javax.swing.JButton Pay_Btn;
     private javax.swing.JButton Payment_Btn;

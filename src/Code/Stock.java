@@ -1,10 +1,19 @@
 package Code;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicButtonUI;
+import javax.swing.table.DefaultTableModel;
 
 public class Stock extends javax.swing.JFrame {
     public Stock() {
@@ -427,7 +436,35 @@ public class Stock extends javax.swing.JFrame {
     }//GEN-LAST:event_About_BtnActionPerformed
 
     private void Add_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add_BtnActionPerformed
+    	
+        DefaultTableModel model = (DefaultTableModel)Inventory.getModel();
+       
+    	String id = product_id.getText();
+        String name = product_name.getText();
+        String type = product_type.getText();
+        String prod_price = price.getText();
+
+        try {
+            
+            Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS", "postgres", "tarun2875");
+
+            String query = "INSERT INTO Inventory values('" + id + "','" + name + "','" + type + "','" +
+                prod_price+ "')";
+
+            Statement sta = connection.createStatement();
+            int x = sta.executeUpdate(query);
+            if (x == 0) {
+                JOptionPane.showMessageDialog(	Add_Btn, "This is alredy exist");
+            } else {
+                JOptionPane.showMessageDialog(Add_Btn,
+                    "Congratulations, " + "Stock has been successfully added");
+            }
+            connection.close();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
         
+        model.addRow(new Object[]{product_id.getText(),product_name.getText(),product_type.getText(),price.getText()});
     }//GEN-LAST:event_Add_BtnActionPerformed
 
     public static void main(String args[]) {

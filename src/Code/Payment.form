@@ -476,6 +476,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Invoice"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Invoice_BtnActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -639,7 +642,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="Invoice_Text">
+                    <Component class="javax.swing.JTextArea" name="Invoice">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
