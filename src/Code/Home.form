@@ -360,7 +360,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jButton1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="Logout_Btn" min="-2" pref="150" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="Product_Frame" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" min="-2" pref="144" max="-2" attributes="0"/>
@@ -378,7 +378,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="Product_Frame" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="88" max="32767" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="Logout_Btn" min="-2" pref="50" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -396,7 +396,7 @@
                     <Property name="text" type="java.lang.String" value="Inventory"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="Logout_Btn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="7" green="c1" red="ff" type="rgb"/>
@@ -407,7 +407,7 @@
                     <Property name="text" type="java.lang.String" value="Log Out"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Logout_BtnActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JInternalFrame" name="Product_Frame">

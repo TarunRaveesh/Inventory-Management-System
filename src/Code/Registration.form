@@ -168,7 +168,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jButton1" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="Signup_Btn" min="-2" pref="150" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel3" min="-2" pref="80" max="-2" attributes="0"/>
@@ -188,7 +188,7 @@
                                       <Component id="jLabel8" min="-2" pref="80" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Terms_Box" min="-2" max="-2" attributes="0"/>
                                           <Component id="cust_address" pref="567" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -239,9 +239,9 @@
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Terms_Box" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="Signup_Btn" min="-2" pref="50" max="-2" attributes="0"/>
                           <EmptySpace pref="130" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -270,7 +270,7 @@
                     <Property name="text" type="java.lang.String" value="Email ID"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                <Component class="javax.swing.JCheckBox" name="Terms_Box">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="4c" green="4c" red="4c" type="rgb"/>
@@ -284,10 +284,10 @@
                     <Property name="text" type="java.lang.String" value="I have Read &amp; Accept to the Terms of Service and Privacy Policy"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Terms_BoxActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="Signup_Btn">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="ff" red="66" type="rgb"/>
@@ -298,7 +298,7 @@
                     <Property name="text" type="java.lang.String" value="Sign Up"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Signup_BtnActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="username">
