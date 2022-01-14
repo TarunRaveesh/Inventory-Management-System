@@ -74,6 +74,7 @@ public class Owner extends javax.swing.JFrame {
         Logout_Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Owner Dashboard");
         setLocation(new java.awt.Point(325, 100));
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -427,35 +428,35 @@ public class Owner extends javax.swing.JFrame {
     private void Home_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Home_BtnActionPerformed
         dispose();
     	Home ah = new Home();
-          ah.setTitle("Welcome");
+          ah.setTitle("Home");
           ah.setVisible(true);
     }//GEN-LAST:event_Home_BtnActionPerformed
 
     private void Employee_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Employee_BtnActionPerformed
         dispose();
     	Employee ah = new Employee();
-          ah.setTitle("Welcome");
+          ah.setTitle("Employee Dashboard");
           ah.setVisible(true);
     }//GEN-LAST:event_Employee_BtnActionPerformed
 
     private void Payment_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Payment_BtnActionPerformed
         dispose();
     	Payment ah = new Payment();
-          ah.setTitle("proceed to pay");
+          ah.setTitle("Payment Page");
           ah.setVisible(true);
     }//GEN-LAST:event_Payment_BtnActionPerformed
 
     private void Stock_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stock_BtnActionPerformed
         dispose();
     	Stock ah = new Stock();
-          ah.setTitle("Welcome");
+          ah.setTitle("Stock");
           ah.setVisible(true);
     }//GEN-LAST:event_Stock_BtnActionPerformed
 
     private void About_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_About_BtnActionPerformed
         dispose();
     	About ah = new About();
-          ah.setTitle("Welcome");
+          ah.setTitle("About");
           ah.setVisible(true);
     }//GEN-LAST:event_About_BtnActionPerformed
 

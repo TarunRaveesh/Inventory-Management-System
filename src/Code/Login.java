@@ -36,6 +36,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         setLocation(new java.awt.Point(325, 100));
         addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
@@ -73,7 +74,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(hLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Cart, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addContainerGap(426, Short.MAX_VALUE))
         );
 
         Signup_Btn.setBackground(new java.awt.Color(255, 193, 7));
@@ -289,7 +290,7 @@ public class Login extends javax.swing.JFrame {
                 if (rs.next()) {
                     dispose();
                     Owner ah = new Owner();
-                    ah.setTitle("Welcome");
+                    ah.setTitle("Owner Dashboard");
                     ah.setVisible(true);
                     JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
                 } else {
@@ -319,7 +320,7 @@ public class Login extends javax.swing.JFrame {
                 if (rs.next()) {
                     dispose();
                     Home ah = new Home();
-                    ah.setTitle("Welcome");
+                    ah.setTitle("Home");
                     ah.setVisible(true);
                     JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
                 } else {
@@ -348,7 +349,7 @@ public class Login extends javax.swing.JFrame {
                 if (rs.next()) {
                     dispose();
                     Employee ah = new Employee();
-                    ah.setTitle("Welcome");
+                    ah.setTitle("Employee Dashboard");
                     ah.setVisible(true);
                     JOptionPane.showMessageDialog(Login_Btn, "Login Successful");
                 } else {
