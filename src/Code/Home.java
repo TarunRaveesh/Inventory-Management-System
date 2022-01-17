@@ -24,6 +24,66 @@ import javax.swing.table.TableCellRenderer;
 public class Home extends javax.swing.JFrame {
     public Home() {
         initComponents();
+        
+        try {
+                DefaultTableModel Model = new DefaultTableModel(new String[]{"Product ID", "Product Name", "Product Type", "Price", "Place Order"}, 0);
+                
+                Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
+                    "postgres", "tarun2875");
+
+                PreparedStatement st = (PreparedStatement) connection
+                        .prepareStatement("SELECT * FROM Inventory");
+                ResultSet rs = st.executeQuery();
+                
+                
+                while(rs.next())
+                {
+                    String a = rs.getString("product_id");
+                    String b = rs.getString("product_name");
+                    String c = rs.getString("product_type");
+                    String d = rs.getString("price");
+                    String e = "Buy Now";
+                    Model.addRow(new Object[]{a, b, c, d, e});
+                }
+                
+                Inventory.setModel(Model);
+                Inventory.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());
+                Inventory.getColumnModel().getColumn(4).setCellEditor(new ButtonEditor(new JTextField()));
+                Inventory.setIntercellSpacing(new java.awt.Dimension(3, 3));
+
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            }
+        
+            Feedback_Btn.setBackground(new Color(76, 76, 76));
+            Feedback_Btn.setUI(new BasicButtonUI());
+            Feedback_Btn.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+                    
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    Feedback_Btn.setBackground(new Color(38, 38, 38));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    Feedback_Btn.setBackground(new Color(76, 76, 76));
+                }
+            });
+        
         JButton [] btns = {Home_Btn, Employee_Btn, Payment_Btn, About_Btn, Stock_Btn, Menu_Btn};
         for (JButton btn : btns) {
             btn.setBackground(new Color(0, 0, 0));
@@ -84,6 +144,7 @@ public class Home extends javax.swing.JFrame {
         Product_Frame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         Inventory = new javax.swing.JTable();
+        Feedback_Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -194,7 +255,7 @@ public class Home extends javax.swing.JFrame {
 
         Shop_Btn.setBackground(new java.awt.Color(51, 255, 255));
         Shop_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        Shop_Btn.setText("Shop Now : )");
+        Shop_Btn.setText("Happy Shopping : D");
         Shop_Btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Shop_BtnActionPerformed(evt);
@@ -210,7 +271,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(Shop_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Shop_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -275,11 +336,17 @@ public class Home extends javax.swing.JFrame {
         );
         Product_FrameLayout.setVerticalGroup(
             Product_FrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Product_FrameLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
         );
+
+        Feedback_Btn.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        Feedback_Btn.setForeground(new java.awt.Color(255, 255, 255));
+        Feedback_Btn.setText(">> Give Feedback");
+        Feedback_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Feedback_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -287,8 +354,11 @@ public class Home extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(Feedback_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -300,9 +370,11 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Feedback_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
         );
 
@@ -383,39 +455,15 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_About_BtnActionPerformed
 
     private void Logout_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout_BtnActionPerformed
-        
+        dispose();
+    	Login ah = new Login();
+          ah.setTitle("Login");
+          ah.setVisible(true);
+          JOptionPane.showMessageDialog(Logout_Btn, "Logout Successful");
     }//GEN-LAST:event_Logout_BtnActionPerformed
 
     private void Shop_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Shop_BtnActionPerformed
-	try {
-                DefaultTableModel Model = new DefaultTableModel(new String[]{"Product ID", "Product Name", "Product Type", "Price", "Place Order"}, 0);
-                
-                Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
-                    "postgres", "tarun2875");
-
-                PreparedStatement st = (PreparedStatement) connection
-                        .prepareStatement("SELECT * FROM Inventory");
-                ResultSet rs = st.executeQuery();
-                
-                
-                while(rs.next())
-                {
-                    String a = rs.getString("product_id");
-                    String b = rs.getString("product_name");
-                    String c = rs.getString("product_type");
-                    String d = rs.getString("price");
-                    String e = rs.getString("place_order");
-                    Model.addRow(new Object[]{a, b, c, d, e});
-                }
-                
-                Inventory.setModel(Model);
-                Inventory.getColumnModel().getColumn(4).setCellRenderer(new ButtonRenderer());
-                Inventory.getColumnModel().getColumn(4).setCellEditor(new ButtonEditor(new JTextField()));
-                Inventory.setIntercellSpacing(new java.awt.Dimension(3, 3));
-
-            } catch (SQLException sqlException) {
-                sqlException.printStackTrace();
-            }
+	
     }//GEN-LAST:event_Shop_BtnActionPerformed
 
     private void Stock_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Stock_BtnActionPerformed
@@ -424,6 +472,10 @@ public class Home extends javax.swing.JFrame {
         ah.setTitle("Stock");
         ah.setVisible(true);
     }//GEN-LAST:event_Stock_BtnActionPerformed
+
+    private void Feedback_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Feedback_BtnActionPerformed
+            
+    }//GEN-LAST:event_Feedback_BtnActionPerformed
 
     public static void main(String args[]) {
         try {
@@ -454,6 +506,7 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton About_Btn;
     private javax.swing.JButton Employee_Btn;
+    private javax.swing.JButton Feedback_Btn;
     private javax.swing.JButton Home_Btn;
     public javax.swing.JTable Inventory;
     private javax.swing.JButton Logout_Btn;

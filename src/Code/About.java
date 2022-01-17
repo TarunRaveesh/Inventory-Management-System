@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicButtonUI;
 
 public class About extends javax.swing.JFrame {
@@ -463,7 +464,11 @@ public class About extends javax.swing.JFrame {
     }//GEN-LAST:event_Menu_BtnActionPerformed
 
     private void Logout_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout_BtnActionPerformed
-        
+        dispose();
+    	Login ah = new Login();
+          ah.setTitle("Login");
+          ah.setVisible(true);
+          JOptionPane.showMessageDialog(Logout_Btn, "Logout Successful");
     }//GEN-LAST:event_Logout_BtnActionPerformed
 
     public static void main(String args[]) {

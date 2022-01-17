@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicButtonUI;
 
 public class Owner extends javax.swing.JFrame {
@@ -164,6 +165,11 @@ public class Owner extends javax.swing.JFrame {
         Abt_Btn.setBackground(new java.awt.Color(255, 153, 204));
         Abt_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Abt_Btn.setText("About");
+        Abt_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Abt_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -187,6 +193,11 @@ public class Owner extends javax.swing.JFrame {
         Mstock_Btn.setBackground(new java.awt.Color(0, 123, 255));
         Mstock_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Mstock_Btn.setText("Manage Stock");
+        Mstock_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Mstock_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -469,8 +480,26 @@ public class Owner extends javax.swing.JFrame {
     }//GEN-LAST:event_Pinfo_BtnActionPerformed
 
     private void Logout_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Logout_BtnActionPerformed
-        
+        dispose();
+    	Login ah = new Login();
+          ah.setTitle("Login");
+          ah.setVisible(true);
+          JOptionPane.showMessageDialog(Logout_Btn, "Logout Successful");
     }//GEN-LAST:event_Logout_BtnActionPerformed
+
+    private void Mstock_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mstock_BtnActionPerformed
+        dispose();
+    	Stock ah = new Stock();
+          ah.setTitle("Stock");
+          ah.setVisible(true);
+    }//GEN-LAST:event_Mstock_BtnActionPerformed
+
+    private void Abt_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Abt_BtnActionPerformed
+        dispose();
+    	About ah = new About();
+          ah.setTitle("About");
+          ah.setVisible(true);
+    }//GEN-LAST:event_Abt_BtnActionPerformed
 
     public static void main(String args[]) {
         try {

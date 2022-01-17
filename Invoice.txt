@@ -1,0 +1,14 @@
+------------------------------------------ INVOICE ------------------------------------------
+Username: Raju
+Payment Amount: 10000
+Mode of Payment: Debit Card
+Card No.: 1234 4567 6789
+Expiration Date: 04/26
+CVV: 031
+-------------------------------- INVOICE -------------------------------
+Username: Akhiles
+Payment Amount: 500
+Mode of Payment: Credit Card
+Card No.: 5667 4883 2103
+Expiration Date: 03/24
+CVV: 034
