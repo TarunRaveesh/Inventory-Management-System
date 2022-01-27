@@ -62,7 +62,7 @@ public class Employee extends javax.swing.JFrame {
         Edit_Btn = new javax.swing.JButton();
         Update_Btn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        usename = new javax.swing.JTextPane();
+        username = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         employee_name = new javax.swing.JTextPane();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -172,8 +172,8 @@ public class Employee extends javax.swing.JFrame {
         Update_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Update_Btn.setText("Update");
 
-        usename.setEditable(false);
-        jScrollPane1.setViewportView(usename);
+        username.setEditable(false);
+        jScrollPane1.setViewportView(username);
 
         employee_name.setEditable(false);
         jScrollPane2.setViewportView(employee_name);
@@ -337,7 +337,7 @@ public class Employee extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(Inventory_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -690,6 +690,6 @@ public class Employee extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextPane usename;
+    private javax.swing.JTextPane username;
     // End of variables declaration//GEN-END:variables
 }
