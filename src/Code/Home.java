@@ -55,35 +55,6 @@ public class Home extends javax.swing.JFrame {
                 sqlException.printStackTrace();
             }
         
-            Feedback_Btn.setBackground(new Color(76, 76, 76));
-            Feedback_Btn.setUI(new BasicButtonUI());
-            Feedback_Btn.addMouseListener(new MouseListener() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    
-                }
-
-                @Override
-                public void mousePressed(MouseEvent e) {
-                    
-                }
-
-                @Override
-                public void mouseReleased(MouseEvent e) {
-                    
-                }
-
-                @Override
-                public void mouseEntered(MouseEvent e) {
-                    Feedback_Btn.setBackground(new Color(38, 38, 38));
-                }
-
-                @Override
-                public void mouseExited(MouseEvent e) {
-                    Feedback_Btn.setBackground(new Color(76, 76, 76));
-                }
-            });
-        
         JButton [] btns = {Home_Btn, Employee_Btn, Payment_Btn, About_Btn, Stock_Btn, Menu_Btn};
         for (JButton btn : btns) {
             btn.setBackground(new Color(0, 0, 0));
@@ -144,7 +115,6 @@ public class Home extends javax.swing.JFrame {
         Product_Frame = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         Inventory = new javax.swing.JTable();
-        Feedback_Btn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -339,15 +309,6 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
         );
 
-        Feedback_Btn.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
-        Feedback_Btn.setForeground(new java.awt.Color(255, 255, 255));
-        Feedback_Btn.setText(">> Give Feedback");
-        Feedback_Btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Feedback_BtnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -360,8 +321,7 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(Feedback_Btn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(25, 25, 25))
         );
@@ -373,11 +333,8 @@ public class Home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Product_Frame, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42))
-                    .addComponent(Feedback_Btn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(Logout_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42))
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -398,7 +355,7 @@ public class Home extends javax.swing.JFrame {
                             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -475,10 +432,6 @@ public class Home extends javax.swing.JFrame {
         ah.setVisible(true);
     }//GEN-LAST:event_Stock_BtnActionPerformed
 
-    private void Feedback_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Feedback_BtnActionPerformed
-            
-    }//GEN-LAST:event_Feedback_BtnActionPerformed
-
     public static void main(String args[]) {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -508,7 +461,6 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton About_Btn;
     private javax.swing.JButton Employee_Btn;
-    private javax.swing.JButton Feedback_Btn;
     private javax.swing.JButton Home_Btn;
     public javax.swing.JTable Inventory;
     private javax.swing.JButton Logout_Btn;

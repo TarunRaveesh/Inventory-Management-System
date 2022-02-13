@@ -327,7 +327,6 @@ public class Payment extends javax.swing.JFrame {
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Visa.jpg"))); // NOI18N
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/Mastercard.jpg"))); // NOI18N
-        jLabel18.setPreferredSize(new java.awt.Dimension(150, 100));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pics/GPay.jpg"))); // NOI18N
 
@@ -411,15 +410,15 @@ public class Payment extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
         jPanel7Layout.setVerticalGroup(
