@@ -221,6 +221,11 @@ public class Owner extends javax.swing.JFrame {
         Memployee_Btn.setBackground(new java.awt.Color(102, 255, 51));
         Memployee_Btn.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         Memployee_Btn.setText("Manage Employee");
+        Memployee_Btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Memployee_BtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -500,6 +505,13 @@ public class Owner extends javax.swing.JFrame {
           ah.setTitle("About");
           ah.setVisible(true);
     }//GEN-LAST:event_Abt_BtnActionPerformed
+
+    private void Memployee_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Memployee_BtnActionPerformed
+        dispose();
+    	Employee ah = new Employee();
+          ah.setTitle("Employee Dashboard");
+          ah.setVisible(true);
+    }//GEN-LAST:event_Memployee_BtnActionPerformed
 
     public static void main(String args[]) {
         try {

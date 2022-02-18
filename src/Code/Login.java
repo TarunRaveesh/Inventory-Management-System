@@ -59,13 +59,15 @@ public class Login extends javax.swing.JFrame {
         SidebarLayout.setHorizontalGroup(
             SidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SidebarLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(hLabel)
+                .addGroup(SidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SidebarLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(hLabel))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SidebarLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Cart, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SidebarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Cart, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SidebarLayout.setVerticalGroup(
             SidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,15 +229,15 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(Sidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 398, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addGap(20, 20, 20)
                         .addComponent(Signup_Btn, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62))
                     .addGroup(BackgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(240, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,12 +271,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_formComponentAdded
 
     private void Login_BtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Login_BtnActionPerformed
-        String value= usertype.getSelectedItem().toString();        
+        String value= usertype.getSelectedItem().toString();
+        String Username = username.getText();
+        String Password = password.getText();
 
         if (value.equals("Owner"))
-        { 
-            String Username = username.getText();
-            String Password = password.getText();
+        {
             try {
                 Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
                     "postgres", "tarun2875");
@@ -304,8 +306,6 @@ public class Login extends javax.swing.JFrame {
 
         else if (value.equals("Customer"))
         {
-            String Username = username.getText();
-            String Password = password.getText();
             try {
                 Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
                     "postgres", "tarun2875");
@@ -334,8 +334,6 @@ public class Login extends javax.swing.JFrame {
 
         else if (value.equals("Employee"))
         {
-            String Username = username.getText();
-            String Password = password.getText();
             try {
                 Connection connection = (Connection) DriverManager.getConnection("jdbc:postgresql://localhost:5432/IMS",
                     "postgres", "tarun2875");
@@ -416,7 +414,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JLabel Cart;
-    private javax.swing.JButton Login_Btn;
+    public javax.swing.JButton Login_Btn;
     private javax.swing.JPanel Sidebar;
     private javax.swing.JButton Signup_Btn;
     private javax.swing.JLabel hLabel;
@@ -427,8 +425,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField password;
-    private javax.swing.JTextField username;
-    private javax.swing.JComboBox<String> usertype;
+    public javax.swing.JPasswordField password;
+    public javax.swing.JTextField username;
+    public javax.swing.JComboBox<String> usertype;
     // End of variables declaration//GEN-END:variables
 }
